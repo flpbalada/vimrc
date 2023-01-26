@@ -1,5 +1,6 @@
 " Plug
 call plug#begin('~/.vim/plugged')
+Plug 'jacoborus/tender.vim'
 Plug 'EdenEast/nightfox.nvim'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
@@ -15,6 +16,7 @@ Plug 'plasticboy/vim-markdown'
 Plug 'storyn26383/vim-vue'
 call plug#end()
 
+
 set number
 set tabstop=4
 set nopaste
@@ -27,7 +29,17 @@ set incsearch
 set autoread
 set noautoindent
 set background=dark 
-colorscheme nightfox
+
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+syntax enable
+colorscheme tender
+let g:airline_theme = 'tender'
+let macvim_skip_colorscheme=1
+
 
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
 let g:WebDevIconsNerdTreeBeforeGlyphPadding = ''
