@@ -1,7 +1,7 @@
 # To use this file
 
 ## 1. Put this snippet into your ~/.vimrc file
-
+i
 > try 
 >   source ~/{path to this file}
 > catch
@@ -13,7 +13,6 @@
 > curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 >   https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-## 3. Download font
 > brew tap homebrew/cask-fonts && brew install --cask font-dejavu-sans-mono-nerd-font
 
 
